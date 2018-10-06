@@ -1,6 +1,8 @@
 require "./spec_helper"
 require "big"
 
+require "./leb128_spec.cr"
+
 describe VarInt do
   # TODO: Write tests
 
