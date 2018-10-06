@@ -13,6 +13,9 @@ class VarInt::LEB128::NonRedundant <  VarInt::LEB128
 		}
 	end
 
+	def self.decode_unsigned_UInt64( bytes : Bytes )
+		decode_unsigned_UInt64( IO::Memory.new(bytes) )
+	end
 	def self.decode_unsigned_UInt64( io : IO )
 		result : UInt64 = 0_u64
 		bytes : UInt32 = 0
